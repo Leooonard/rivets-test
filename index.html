@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>rivets test</title>
+        <script type="text/javascript" src = "./jquery.js"></script>
+        <script type="text/javascript" src = "./rivets.bundled.min.js"></script>
+        <script type="text/javascript" src = "./knockout.js"></script>
+        <script type="text/javascript" src = "./index.js"></script>
+    </head>
+    <body>
+        <ul>
+            <!-- 勾选框 -->
+            <li id = "tab1" rv-show = "item.show">
+                <input type="checkbox" rv-checked = "item.checked" id = "checkbox">
+                <span>{item.text2}</span>
+                <span>{item.text3}</span>
+            </li>
+            <!-- 基本文本和数字控件 -->
+            <li id = "tab2" rv-show = "item.show">
+                <button type="button" id = "addButton">+</button>
+                <span>{item.text}</span>
+                <button type="button" id = "minusButton">-</button>
+            </li>
+            <!-- 富文本 -->
+            <li id = "tab3" rv-show = "item.show">
+                <span rv-text = "item.richText"></span>
+            </li>
+
+            <li id = "tab4" rv-hide = "item.checked">
+                <span id = "tab4Child">{item.now}</span>
+            </li>
+        </ul>
+
+        <button type="button" id = "showTab1">show tab1</button>
+        <button type="button" id = "showTab2">show tab2</button>
+        <button type="button" id = "showTab3">show tab3</button>
+    </body>
+</html>

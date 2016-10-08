@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>list test</title>
+        <script type="text/javascript" src = "./rivets.bundled.min.js"></script>
+        <script type="text/javascript" src = "./list.js"></script>
+    </head>
+    <body>
+        <ul id = "passengerList">
+            <li rv-each-passenger = "list.passengers">
+                <span>{passenger.name}</span>
+                <span>{passenger.gender}</span>
+            </li>
+        </ul>
+    </body>
+</html>
